@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ini dasar template bootstraps -->
+    <title>Pakis</title>
+
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ini buat ngehubungin dengan file bootstrap css nya -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- ini buat ngehubungin ke style.css -->
+   <script src="assets/js/jquery-1.11.0.min.js"></script>
+   <!-- ini buat ngehubungin ke jquery -->
+  </head>
+
+<script>
+	$(document).ready(function(){
+		$("body").hide(300).show(5000);
+// });ini buat bikin animation masuk di awal2
+
+    $(document).ready(function(){
+      $('a[href*=#]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+          var $target = $(this.hash);
+          $target = $target.length && $target
+          || $('[name=' + this.hash.slice(1) +']');
+          if ($target.length) {
+            var targetOffset = $target.offset().top;
+            $('html,body')
+            .animate({scrollTop: targetOffset}, 1000);
+           return false;
+          }
+        }
+      });
+    // });ini buat scrolling down nya smooth pas kita one page website
+
+</script>
+
+  <body data-spy="scroll" data-target="#my-navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+  <div class="container-fluid">
+  <!-- ini buat navbar -->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      	 <img alt="Brand" src="assets/img/logo.png" width="40,5px" height="40,5px"><!-- ini logo di navbar -->
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Project</a></li>
+        <li class="dropdown">
+          <a href="#usefullthings" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usefull Things<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Go to google</a></li>
+            <li><a href="#">My personal contact</a></li>
+            <li><a href="#">My line account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="This is useless T.T">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+        <li><a href="#contact">About Me</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Sosmed <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li role="separator" class="divider"></li>  
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- semua navbar di bagian atas website -->
+<div class="jumbotron text-center"><!-- ini kotak besar di tengah tengah web bagian atas -->
+	<div class="container"></div>
+  <h1>We Are BNCC 28</h1>
+  <img alt="jumbotron" src="assets/img/PelantikanAktivis28_3325.jpg" id="jumbotron" width="1080px" height="480px">
+  <p>The day we become BNCC</p>
+  <p><a class="btn btn-primary btn-lg" href="https://www.bncc.net/" role="button">BNCC</a></p>
+  </div>
+</div>
+
+<div class="row"><!-- ini baris untuk masing masing majalah website yang di masukin -->
+  <div class="col-md-4"><!-- masing-masing topik dapet 4 grid jadi totalnya 12 -->
+    <div class="thumbnail">
+      <img src="assets/img/orangtidur.jpg" alt="orangtidur" class="img-circle" width="252px" height="150px">
+      <div class="caption">
+        <h3>9 Cara membuat tidur anda berkualitas</h3>
+        <p></p>
+        <p><a href="#berkualitas" class="btn btn-primary" role="button">View Details</a><!-- href nya dimasukin ke button di masing-masing topik --> 
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="assets/img/program.jpg" alt="program" class="img-circle"  width="300px" height="300px">
+      <div class="caption">
+        <h3>5 Tips belajar cepat menjadi programmer</h3>
+        <p></p>
+        <p><a href="#program" class="btn btn-primary" role="button">View Details</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="assets/img/senang.jpg" alt="..." class="img-circle"  width="300px" height="300px">
+      <div class="caption">
+        <h3>4 Cara agar hidup lebih tenang dan senang</h3>
+        <p></p>
+        <p><a href="#senang" class="btn btn-primary" role="button">View Details</a> 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+ <section><!-- oh iya setiap div class container ditutup, dibuat container baru lagi jadi kaga mentok kiri atau mentok kanan nanti webnya -->
+  	<div class="page-header" id="usefullthings">
+    <!-- page header buat ngasih garis sebelum masuk ke div di dalem div page-header -->
+		<h2>Usefull Things You Must Know<small> For more good futures</small></h2>
+	</div>
+	 <div class="row" id="berkualitas" href="#http://www.akuinginsukses.com/9-tips-untuk-membuat-tidur-anda-berkualitas-nyenyak/">
+	 	<div class="col-md-8">
+	 	<blockquote>
+	 		<h3>9 Cara membuat tidur anda berkualitas</h3>
+	 		<p>Memperoleh tidur yang cukup sangatlah penting karena jika anda selalu mendapatkan jam tidur yang kurang, akan sangat mempengaruhi kondisi kesehatan anda. Penelitian menunjukkan bahwa kurang tidur dapat menyebabkan masalah pada berat badan anda, kemurungan (tidak bersemangat), masalah pada jantung dan bahkan membuat tubuh anda rentan terkena penyakit. Kebanyakan orang mengetahui bahwa tidur sangatlah penting, namun demikian mereka justru semakin hari semakin mendapatkan jam tidurnya berkurang karena alasan kerjaan yang menumpuk, kebiasaan tidur larut, main game, dsb.
+<br>
+Semasa mahasiswa saya memiliki pola tidur yang sangat buruk : mengobrol hingga larut dengan teman-teman organisasi, main game dan keluyuran. Jam 2 pagi adalah jam paling cepat saya tidur waktu itu. Bangun di siang hari dengan kondisi badan yang lemas dan tidak bersemangat. Betul-betul seperti vampire, malas keluar rumah di siang hari.
+<br>
+Kebiasaan buruk saya tersebut akhirnya membawa dampak yang terasa sampai dengan saat ini : saya mengalami gangguan dengan maag. Biasanya orang yang memiliki pola tidur yang buruk, ia memiliki pola makan yang buruk juga, dan itulah yang saya alami.
+<br>
+Yah itu intermezzo sedikit tentang kebiasaan jelek saya dahulu. Bagi para pembaca yang memiliki pola hidup seperti saya dahulu, saya sarankan untuk segera merubahnya. Mungkin saat ini anda belum terasa karena anda masih muda, namun seiring bertambahnya umur anda, biasanya anda akan mulai merasakan gejala-gejala akibat pola tidur dan pola makan yang buruk.
+Oke kembali ke topik utama kita kali ini, yaitu 10 tips yang akan membantu anda mendapatkan tidur yang berkualitas :
+<br>
+1. Berolahraga
+<br>
+Para ahli kesehatan, siapapun dan dimanapun, pasti menganjurkan kita untuk berolahraga rutin. Mungkin anda pun sudah bosan mendengarkan nasihat ini berkali-kali. Tak ada salahnya saya mengingatkan sekali lagi kali ini. :)
+Banyak sekali manfaat berolahraga, salah satunya membantu anda agar cepat tidur di malam hari dan anda memperoleh tidur yang berkualitas (nyenyak).
+<br>
+2. Jadwalkan waktu tidur anda
+<br>
+Menjadwalkan tidur anda secara teratur juga merupakan hal yang penting dalam mendapatkan tidur berkualitas. Hindari hari ini anda tidur pukul 9 malam, keesokan hari pukul 12 malam dan keesokan harinya lagi pukul 10 malam. Keteraturan akan membantu metabolisme dalam tubuh anda berjalan baik.
+<br>
+3. Kenali kebiasaan anda
+<br>
+Menyambung poin 2 diatas, begitu anda mengetahui jam tidur anda setiap malam, pastikan anda mempersiapkan segala sesuatu yang biasa anda lakukan sebelum tidur dengan baik agar jam tidur anda tidak terlewat. Sebagai contoh : anda berencana untuk tidur setiap malam pukul 11 dan anda mempunyai kebiasaan membaca kurang lebih setengah jam sebelum tidur. Artinya pukul 10.30 maksimal anda harus sudah mulai membaca sehingga pukul 11 malam anda sudah tertidur.
+<br>
+4. Jangan mengkonsumsi makanan yang berat sebelum tidur
+<br>
+Pastikan anda tidak makan berat atau terlalu banyak sebelum tidur. Makan malam yang ringan sangatlah disarankan. Saat ini sering saya mendengar orang-orang melakukan diet di malam hari. Banyak rekan-rekan saya mulai melakukan hal ini : mereka makan sedikit nasi atau bahkan tidak makan nasi sama sekali, hanya lauk pauk dan sayur-sayuran saja. Hal ini baik sekali. Perut yang sangat penuh dapat membuat anda kesulitan untuk tidur. Jika anda masih merasa lapar, disarankan mengemil buah-buahan saja dibanding ’junk food’.
+<br>
+Saya pernah mendengar nasihat dari orang yang sangat sukses dan bijak, diusianya yang sudah berkepala 6 namun tetap energik seperti usia 40 tahun : ”cukup tidur, banyak minum dan makan jangan terlalu kenyang.”
+Ya, nasihat yang sangat sederhana namun dapat membuat orang berumur panjang.
+<br>
+5. Matikan komputer anda
+<br>
+Jika anda adalah penggila komputer entah itu untuk browsing ataupun bermain game, disarankan anda membuat jeda antara anda berhenti bermain komputer dengan saat sebelum anda naik ke atas ranjang anda, minimal ½ jam. Biasanya kita akan mengalami kesulitan untuk tidur jika kita langsung berbaring sehabis menggunakan komputer. Relax-kan otak anda sejenak, karena otak anda masih ‘panas’ saat itu.
+<br>
+Memang kadang-kadang sulit untuk melakukan hal ini, seperti yang saya alami, karena kita sedang asik-asiknya dan pasti merasa sayang sekali jika kita menyia-nyiakan waktu setengah jam tersebut tidak berada di depan komputer.
+Namun saya juga merasakan jika otak saya telah dingin, saya menjadi lebih cepat untuk tertidur.
+<br>
+6. Jangan mengobrol di telepon sebelum tidur
+<br>
+Ini mirip dengan poin no 5. Ketika anda mengobrol dengan teman anda di telepon, otak anda saat itu berada pada ‘mode siaga’. Perlu waktu untuk merubahnya menjadi ‘mode tenang’. Luangkan waktu kira-kira setengah jam untuk mendinginkan otak anda sebelum anda pergi tidur. Otak yang tenang tentu saja membuat kita lebih cepat untuk tertidur.
+<br>
+7. Pastikan lampu kamar anda padam
+<br>
+Sangat disarankan jika kita tidur dalam keadaan kamar yang gelap. Hampir sebagian besar ahli menyarankan untuk mematikan lampu saat kita beristirahat karena akan mempengaruhi kualitas tidur kita. Saya pernah membaca sebuah artikel yang mengatakan bahwa efek cahaya akan merangsang hormon tertentu dan akhirnya mempengaruhi metabolisme di dalam tubuh kita.
+Biasanya jika ruangan tempat kita beristirahat dalam keadaan gelap, tidur kita akan nyenyak dan jarang sekali terjaga.
+<br>
+8. Kasur
+<br>
+Apakah kasur anda sudah terlalu tua untuk anda gunakan? Apakah pada bagian tengahnya sudah lebih kempis dibandingkan sisi-sisinya? Jika demikian, saya sarankan anda untuk menggantinya dengan yang baru, yang akan menopang tubuh anda lebih baik sehingga anda merasa jauh lebih nyaman selama tidur.
+Hal ini biasanya terjadi pada kasur yang berisikan kapuk. Model ‘spring bed’ jarang sekali terjadi.
+<br>
+9. Lingkungan tidur anda
+<br>
+Jika anda seringkali terbangun hanya untuk mematikan AC atau kipas angin karena kedinginan, hal tersebut jelas sangat mempengaruhi kualitas tidur anda. Aturlah timer pada AC / kipas angin tersebut atau jika tidak terdapat timer, pastikan anda menyelimuti diri anda sebelum tidur sehingga anda tidak terbangun di tengah malam untuk mematikan AC atau kipas angin.
+<br>
+Jadi para pembaca yang budiman, mulai hari ini anda bisa melakukan tips-tips diatas agar tidur anda lebih berkualitas, sehingga pada keesokan hari anda dapat memulai hari anda dengan lebih segar dan ceria.</p><br></blockquote>
+	 	</div>
+	 </div>
+	 <div class="row" id="program" href="http://winpoin.com/5-tips-belajar-cepat-menjadi-programmer/">
+	 	<div class="col-md-8">
+	 	<blockquote>
+	 		<h3>5 Tips belajar cepat menjadi programmer</h3>
+	 		<p>Terkadang ketika seseorang ingin belajar bahasa pemrograman pasti pernah bingung: mulai dari mana, kemana materi yang harus dipelajari, dsb. Ketika saya belajar untuk menjadi seorang programmer, saya pelajari bahasa pemrograman C#. Berminggu-minggu, berbulan-bulan saya masih belum paham betul karena baca-baca buku yang terkadang beda dengan pemahaman kita. Akhirnya selama kurang lebih 3 bulan, saya paham mengenai OOP. Kali ini saya mau share bagi para pemula bagaimana sih supaya cepat memahami suatu bahasa program. Berikut ini adalah 5 tips yang bisa kalian pakai supaya cepat menjadi programmer (jangan dulu handal, kalem saja). :D
+<br>
+ 
+1. Cari Sample Project, Code yang Sederhana
+<br>
+Yang pertama adalah mencari sampel (contoh) project atau kode yang sederhana. Banyak situs web yang menyediakan berbagai project gratis, salah satu web yang saya sarankan yaitu di CodeProject.com. Disana tersedia berbagai contoh project dan kode-kode sesuai dengan bahasa yang kalian pelajari. Kalian harus pastikan melihat, mencoba dan memahami setiap kode yang ada. Coba pahami apa fungsi dari kode-kode yang ada itu. Dari sanalah awal-mula kita membuka pemikiran terhadap bahasa pemrograman.
+
+ <br>
+2. Jangan hanya membaca dan menjalankan contoh program saja
+<br>
+Kadang, ketika kita sudah mendapatkan sebuah contoh project/kode, kita sering beranggapan “saya tau ini, pasti bakal begini-begitu”. Jangan salah, kemungkinan itu hanya kemauan kita untuk memanfaatkan contoh project itu tanpa memahami setiap baris kodenya. Oleh sebab itu, coba ketik ulang dan pahami setiap baris dan prioritaskan bagian yang diperlukan saja.
+<br>
+Mungkin memerlukan waktu yang cukup lama untuk memahami suatu contoh project. Tak jarang, pemula harus dihadapkan dengan permasalahan yang cukup sederhana dalam suatu contoh project. Salah satu contoh kasus adalah kamu mendapatkan pesan error “Missing Reference …… bla..bla..bla”. Disinilah kamu diberikan cobaan yang cukup membingungkan untuk memecahkan masalah tersebut. Cari-cari di internet sampai ketemu, sampai akhirnya permasalahan itupun terpecahkan dan pemahaman pun akan semakin meluas.
+
+ <br>
+3. Luangkan waktu untuk belajar menulis kode buatan sendiri
+<br>
+Yang ketiga, luangkanlah waktu untuk menulis kode buatan sendiri. Setelah memahami sesuatu tentang bahasa pemrograman atau bahkan jika kamu masih kebingungan ide apa yang harus dituangkan, balik lagi ke nomor dua. Lihat, Baca dan Pahami. Dibagian ini kamu akan dihadapkan dengan beberapa tantangan, tentu akan mengasah dan memperluas pemahaman kita terhadap bahasa pemrograman.
+
+ <br>
+4. Lihat Kesalahan-kesalahan yang diberikan oleh Debugger
+<br>
+Biasanya di sebuah IDE terdapat sebuah panel “Error List” yang menampilkan beberapa kesalahan-kesalahan pada project yang sedang dibuat. Disana kamu akan tau, masalah-masalah apa saja yang harus diselesaikan. Itu tantangan yang diberikan oleh sistem. Untuk memecahkan masalah-masalah tersebut bisa mencari referensi dari internet, coba cari dengan keyword sesuai dengan pesan kesalahannya.
+
+ <br>
+5. Cari Sumber-sumber yang membahas permasalahan kode
+<br>
+Apabila ada masalah yang tidak dapat dipecahkan atau tidak dipahami, kunjungi saja forum WinPoin. Saya yakin forum ini akan banyak yang membantu. Kalau mau yang lebih kompleks coba masuk ke forum CodeProject.com.
+
+Itulah 5 tips cara cepat untuk mempelajari bahasa pemrograman. Semoga tips ini membantu bagi para pemula yang ingin belajar bahasa pemrograman.</p><br></blockquote>
+	 	</div>
+	 </div>
+	 <div class="row" id="senang" link="https://aviva29.wordpress.com/2013/04/12/10-cara-agar-hidup-lebih-tenang-dan-damai/">
+	 	<div class="col-md-8">
+	 	<blockquote>
+	 		<h3>4 Cara agar hidup lebih tenang dan senang</h3>
+	 		<p>Senantiasa dirundung cemas, stres , atau tertekan? Coba ikuti langkah-langkah berikut ini! hidup anda akan terasa lebih indah, tenang, dan menyenangkan.
+<br>
+Dalam hidup ini, terdapat banyak hal yang dapat membuat kita terasa tertekan, panik, atau stres, misalnya karena tugas sekolah menumpuk, teman tak bersahabat, konflik dengan keluarga, dll. “Hidup ini bagaikan berlian. Adapun warnanya, tergantung dari mana orang melihatnya,” begitu kata-kata orang bijak. Ucapan itu memang benar. Dalam hidup ini banyak cara yang dapat kita lakukan untuk mengubah kecemasan menjadi ketenangan dan kedamain. Berikut ini kiatannya.
+<br>
+   1. Perbaiki Presepsi tentang Diri Sendiri
+<br>
+Sebaiknya, anda berhati-hati dalam menilai diri sendiri. Mengapa? Karena diri kita terbentuk dari apa yang kita pikirkan. Ibarat sebuah kebun, pikiran yang baik akan menghasilkan buah yang baik. Sebaliknya, pikiran buruk akan menghasilkan buah yang buruk pula. Ulas kembali pikiran anda, pusatkan pikiran pada harapan dan keberhasilan, bukan pada keputusan dan kekalahan. Tak jarang perubahan dalam cara berfikir dan memandang suatu masalah dapat menjadi jalan menuju ketentraman jiwa.
+<br>
+    2. Membantu Orang yang Mmbutuhkan
+<br>
+Beberapa penelitian menunjukkkan bahwa mereka yang meluangkan waktunya untuk membantu orang lain ternyata lebih bahagia dan tenang jiwanya. Bahkan, sebuah penelitian yang dilakukan di Michigan, Amerika Serikat membuktikan bahwa mereka yang aktif dalam kegiatan amal atau organisasi di luar rumah lebih panjang umur dan sehat dari pada yang lebih senang berdiam diri. Menurut para ahli, hal itu disebabkan karena tubuh mereka yang senang menolong itu memproduksi helper’s high, yaitu sejenis senyawa kimia otak yang berfungsi meningkatkan mood.
+<br>
+   3.  Berjalan Kaki
+<br>
+Salah satu cara tercepat untuk mengubah perasaan stres menjadi tenang adalah dengan berjalan kaki. Sebuah penelitian yang yang dilakukan di California State University, Amerika Serikat, membuktikan bahwa jalan kaki selama 10 menit dapat membangkitkan mood lebih cepat dan tahan lama daripada makan permen. Memang, rasa manis dari permen dapat menimbulkan semangat, tetapi biasanya seperempat jam kemudian anda akan merasa lebih lelah. Sebaliknya, dengan berjalan kaki semangat dan energi yang muncul dapat bertahan lebih lama. Oleh karena itu, jika suatu saat pikiran sedang mumet atau semangat telah menurun, segeralah langkahkan kaki anda. Kemudian, berjalan selama 10 menit.
+<br>
+   4.  Mendengarkan Musik
+<br>
+Di abat 18, seorang penulis terkenal asal  Jerman, Jean Paul Friedrich Richter, pernah menyebutkan: “dalam kehidupan manusia, musik itu bagaikan bulan purnama di kegelapan malam,” tulisanya. Ternyata, kini para ahli telah membuktikan kebenaranya. Musik memang mampu menenangkan saraf yang menegang. Bahkan, menurut beberapa ahli penyakit jantung di Amerika Serikat, mendengarkan musik selama seperempat jam dapat menghasilkan pengaruh yang sama denga pemakaian 10 mg obat penenang valium. Penelitian lain menunjukkan bahwa musik juga dapat menurunkan tekanan darah, metabolisme dasar, serta tingkat respirasi, sehingga mengurangi respon spikologis terhadap stres. Oleh karena itu, jika ingin menciptakan perasaan damai dan tenang, carilah salah satu musik yang paling disukai. Nyalakan dan dengarkan musik itu di hari-hari yang penuh dengan stres. Anda akan merasakan lebih santai dan tenang.</p></blockquote><!-- BLOCKQUOTE untuk ngasih garis kanan kiri antara tulisan -->
+	 	</div>
+	 </div>
+  </section>
+  </div>
+  <div class="container">
+  	<section>
+  		<div class="page-header" id="contact"><!-- ini div untuk contact -->
+		<h2>Contact me<small> for more information.</small></h2>
+	</div>
+		<div class="row">
+			<div class="col-md-4">
+				<p>Send me a message, or contact me from the addres below</p>
+				<address>
+					<strong>Christian Wijaya</strong><br><!-- strong biar kaya ke block -->
+					Pademangan Timur<br>
+					Pademangan 3 gang 20<br>
+					Jakarta Utara, Indonesia.<br>
+					huangchristian98@yahoo.com<br>
+					+6287874148534
+				</address>
+			</div>
+			<div class="col-md-8"><!-- ini gridnya 8 -->
+				<form action="" class="form-horizontal">
+					<div class="form-group">
+						<label for="user-name" class="col-md-2 control-label">Name	
+						</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="user-name" placeholder="Enter your name">
+						</div>
+					</div>
+          <!-- tapi kenapa di dalem grid 8 bisa ada 2 sama 10, itu karena di dalem grid 8 itu sebenernya ada 12 grid lagi tapi bukan grid yang udah ada di web, tetapi grid yang ada di grid 8. -->
+					<div class="form-group">
+						<label for="user-name" class="col-md-2 control-label">Email	
+						</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="user-email" placeholder="Enter your email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="user-name" class="col-md-2 control-label">Message me
+						</label>
+						<div class="col-md-10">
+						<textarea name="user-message" id="user-message" class="form-control" cols="20" rows="10" placeholder="Enter your message"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-2"><!-- grid offset itu supaya gridnya dimulai setelah 2 grid di lewatin :D -->
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+						
+					</div>
+				</form>
+			</div>
+		</div>
+
+  	</section>
+  	
+  </div>
+<div class="container">
+	<section>
+	<div class="page-header" id="faq"><!-- ini buat questin and answer -->
+		<h2>FAQ.<small>Answering your question</small></h2>
+	</div>
+	<div class="panel-group" id="accordion"><!-- panel group itu supaya jadi group yang sama dah ada panelnya -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title"><!-- yang ini buat judul pertanyaannya -->
+					<a href="#collapse-1" data-toggle="collapse" data-parent="#accordion">Who i am?</a>
+				</div>
+				<div id="collapse-1" class="panel-collapse">
+					<div class="panel-body">
+						Saya Christian WIjaya, Mahasiswa Binusian, aktifis BNCC.
+						<br>
+						Muda, single dan bersemangat XD.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<a href="#collapse-2" data-toggle="collapse" data-parent="#accordion">Ini apaan?</a>
+				</div>
+				<div id="collapse-2" class="panel-collapse "><!-- ini buat panelnya menurun harusnya cman gagal -->
+					<div class="panel-body">
+						Project pertama yang diberikan oleh senior BNCC
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<a href="#collapse-3" data-toggle="collapse" data-parent="#accordion">Untuk apa?</a>
+				</div>
+				<div id="collapse-3" class="panel-collapse">
+					<div class="panel-body">
+						Hmmmm..??? Seneng-seneng XD.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+</div>
+
+<section>
+	<div class="well "><!-- ini buat supaya kaya backgroundnya berwarna -->
+
+		<div class="container text-center"><!-- text center itu supaya textnya ke tengah tengah container atau di tengah tengah semua grid -->
+			<h3>Follow me on Sosmed for more</h3>
+			<p>Enter your name and email</p>
+			<form action="" class="form-inline">
+				<div class="form-group">
+					<label for="Subcription">Name</label>
+					<input type="text" class="form-control" id="follow" placeholder="Your name">
+					</div>
+					<div class="form-group">
+						<label for=email>Email address</label>
+						<input type="text" class="form control" id="followemail" placeholder="Enter your Email">
+						</div>
+				<button type="submit" class="btn btn-primary">Follow</button>
+			</form>
+		</div>
+	</div>
+</section>
+<div class="text-center">
+<hr>
+<ul class="list-inline">
+	<li><a href="https://www.facebook.com/Christian.Wijaya.24.12.97"><strong>Facebook</strong></a></li>
+	<li><a href="https://www.youtube.com/channel/UCvwXb8pWqzTe6bKD-auqpEw"><strong>Youtube</strong></a></li>	<!-- ini sosmed yang udah di link dan berhasil -->
+</ul>
+</div>
+<div class="text-center">
+<p>&copy:Copyright @ 2016</p><!-- ini cuman template copyright biasa -->
+</div>
+	<footer>
+        <p>© 2016 Pakis, Inc.</p>
+      </footer><!-- ini cman footer perusahaan :D -->
+  </body>
+</html>
